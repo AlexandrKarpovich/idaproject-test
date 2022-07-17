@@ -22,6 +22,7 @@ export default {
 <style lang="scss">
   body {
     font-family: 'Source Sans Pro', sans-serif;
+    background: #E5E5E5;
   }
   .wrapper {
     max-width: 100%;
