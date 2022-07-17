@@ -1,4 +1,4 @@
-<!-- # [idaproject-test](https://idaproject-test-ten.vercel.app/) -->
+# [idaproject-test](https://idaproject-test-rho.vercel.app/)
 
 # Frontend-developer test
 # **Основное задание**
@@ -104,4 +104,4 @@
 Добавление прелодера на странице для плавной инициализации списка
 
 
-<!-- ![Image alt](https://github.com/AlexandrKarpovich/idaproject-test/blob/master/static/demo.jpg) -->
+![Image alt](https://github.com/AlexandrKarpovich/idaproject-test/blob/master/static/demo.jpg)
