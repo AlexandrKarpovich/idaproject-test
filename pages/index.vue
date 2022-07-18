@@ -1,27 +1,33 @@
 <template>
   <div class="wrapper">
-    <Top />
+    <div class="container">
+      <Top />
+    </div>
     <main class="main">
-      <Sidebar />
-      <Grid />
+      <div class="container">
+        <Sidebar />
+        <Grid />
+      </div>
     </main>
   </div>
 </template>
 
 <script>
-import Top from '../components/Top.vue';
-import Sidebar from '../components/sidebar.vue';
-import Grid from '../components/Grid.vue';
 
 export default {
-    name: "IndexPage",
-    components: { Top, Sidebar, Grid  }
+    name: "IndexPage"
 }
 </script>
 
 <style lang="scss">
   body {
     font-family: 'Source Sans Pro', sans-serif;
+    background: #E5E5E5;
+  }
+  .container {
+    width: 100%;
+    max-width: 1440px;
+    margin: auto;
   }
   .wrapper {
     max-width: 100%;
