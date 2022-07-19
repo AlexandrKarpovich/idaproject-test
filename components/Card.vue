@@ -2,13 +2,13 @@
     <div class="card__inner">
         <span class="del"></span>
         <div>
-            <img 
-                :src="imgUrl" 
-                class="card-img-top" 
+            <img
+                :src="imgUrl"
+                class="card-img-top"
                 :alt="imgUrl"
             >
         </div>
-        
+
         <div class="card__text">
             <h5 class="card__title">{{ title }}</h5>
             <p class="card__descr">{{ descr }}</p>
@@ -27,7 +27,7 @@ export default {
             //     return value.length < 3
             // },
             required: true
-        }, 
+        },
         descr: {
             type: String,
         },
@@ -38,7 +38,7 @@ export default {
             //     return value.length < 3
             // },
             required: true
-        }, 
+        },
         price: {
             type: Number,
             // validator(value) {
@@ -72,7 +72,7 @@ export default {
                 }
             }
         }
-        
+
         img {
             width: 100%;
         }
