@@ -79,10 +79,9 @@ export default {
 
 <style lang="scss">
     .grid {
-        // width: 75%;
+        width: 72%;
         max-width: 1280px;
-        // margin-left: auto;
-        margin-left: 348px;
+        margin-left: auto;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(265px, 1fr));
         grid-gap: 16px;

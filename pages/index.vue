@@ -1,8 +1,6 @@
 <template>
   <div class="wrapper">
-    <div class="container">
-      <Top />
-    </div>
+    <Top />
     <main class="main">
       <div class="container">
         <Sidebar />
@@ -28,19 +26,20 @@ export default {
     width: 100%;
     max-width: 1440px;
     margin: auto;
+    display: flex;
   }
   .wrapper {
     max-width: 100%;
     padding: 32px;
   }
-  
+
   .main {
     width: 100%;
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
   }
-  
 
-  
+
+
 </style>

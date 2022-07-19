@@ -1,4 +1,5 @@
 <template>
+  <div class="container">
     <div class="top">
       <h2 class="title">Добавление товара</h2>
       <div class="filter">
@@ -13,6 +14,8 @@
         </select>
       </div>
     </div>
+  </div>
+
 </template>
 
 <script>
@@ -46,10 +49,11 @@ export default {
 
 <style lang="scss">
     .top {
+        width: 100%;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 0 16px 0 0;
+        padding: 0 10px 0 0;
 
         @media (max-width: 480px) {
           flex-wrap: wrap;
