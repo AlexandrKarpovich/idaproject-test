@@ -1,7 +1,7 @@
 <template>
     <div class="grid">
         <div class="card" v-for="(item, index) in cards" :key="index">
-            <Card 
+            <Card
                 :title="item.title"
                 :descr="item.descr"
                 :imgUrl="item.imgUrl"
@@ -16,8 +16,14 @@ import Card from './Card.vue';
 export default {
     name: "Grid",
     components: { Card },
-    props: [],
+    props: {
+        title: '',
+        descr: '',
+        imgUrl: '',
+        price: '',
+    },
     data() {
+      // console.log(this.title);
         return {
             cards: [
                 {
@@ -64,7 +70,10 @@ export default {
                 }
             ]
         }
-    }
+    },
+    methods: {
+
+    },
 }
 </script>
 
@@ -80,5 +89,10 @@ export default {
         overflow-y: auto;
         padding-top: 8px;
         padding-right: 8px;
+
+      @media (max-width: 768px) {
+        width: 100%;
+        margin-left: 0;
+      }
     }
 </style>

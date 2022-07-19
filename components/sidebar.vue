@@ -1,59 +1,59 @@
 <template>
     <aside class="sidebar">
         <div class="sidebar__item">
-          <label 
-            for="name" 
+          <label
+            for="name"
             class="name">Наименование товара
           </label>
-          <input 
-            type="text" 
-            class="form-control is-invalid" 
-            id="name" 
-            required 
+          <input
+            type="text"
+            class="form-control is-invalid"
+            id="name"
+            required
             placeholder="Введите наименование товара"
             v-model.trim="title"
           >
           <p class="invalid">Поле является обязательным</p>
         </div>
         <div class="sidebar__item">
-          <label 
-            for="exampleFormControlTextarea1" 
+          <label
+            for="exampleFormControlTextarea1"
             class="form-label">Описание товара
           </label>
-          <textarea 
-            class="form-control" 
-            id="exampleFormControlTextarea1" 
-            placeholder="Введите описание товара" 
+          <textarea
+            class="form-control"
+            id="exampleFormControlTextarea1"
+            placeholder="Введите описание товара"
             rows="3"
             v-model.trim="descr"
             >
           </textarea>
         </div>
         <div class="sidebar__item">
-          <label 
-            for="name" 
+          <label
+            for="name"
             class="imgUrl">Ссылка на изображение товара
           </label>
-          <input 
-            type="text" 
-            class="form-control is-invalid" 
-            id="name" 
-            required 
+          <input
+            type="text"
+            class="form-control is-invalid"
+            id="name"
+            required
             placeholder="Введите ссылку"
             v-model.trim="imgUrl"
           >
           <p class="invalid">Поле является обязательным</p>
         </div>
         <div class="sidebar__item">
-          <label 
-            for="name" 
+          <label
+            for="name"
             class="price">Цена товара
           </label>
-          <input 
-            type="text" 
-            class="form-control is-invalid" 
-            id="name" 
-            required 
+          <input
+            type="text"
+            class="form-control is-invalid"
+            id="name"
+            required
             placeholder="Введите цену"
             v-model.trim="price"
           >
@@ -73,12 +73,13 @@ export default {
         imgUrl: '',
         price: '',
         isValidate: false,
-        cards: {}
+        cards: []
       }
     },
     methods: {
       addNewCard(event) {
-        console.log(this.cards[event.id]);
+        this.cards.push(this.title, this.descr, this.imgUrl, this.price )
+        // console.log(this.cards);
       },
       // validateInput(value) {
       //   // this.isValidate > value.length < 3
@@ -91,10 +92,6 @@ export default {
 <style lang="scss">
     .sidebar {
       position: fixed;
-      // top: 24px;
-      // width: 25%;
-      // max-width: 332px;
-      // min-width: 230px;
       width: 332px;
       display: flex;
       flex-direction: column;
@@ -103,6 +100,11 @@ export default {
       padding: 24px;
       box-sizing: border-box;
       margin-top: 8px;
+
+      @media (max-width: 768px) {
+        position: inherit;
+        width: 100%;
+      }
 
       &__item {
           display: flex;
@@ -149,7 +151,7 @@ export default {
       line-height: 15px;
       &:placeholder {
         color: #B4B4B4;
-      }   
+      }
     }
     input.is-invalid {
       border: 1px solid #FF8484;
