@@ -91,8 +91,11 @@ export default {
 
 <style lang="scss">
     .sidebar {
-      position: fixed;
-      width: 332px;
+      position: sticky;
+      top: 24px;
+      width: 100%;
+      max-width: 332px;
+      height: fit-content;
       display: flex;
       flex-direction: column;
       box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.04), 0px 6px 10px rgba(0, 0, 0, 0.02);
